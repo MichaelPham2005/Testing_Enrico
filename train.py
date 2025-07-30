@@ -16,7 +16,9 @@ from save_load import save_model, load_model
 def train(model, optimizer, train_data, num_steps=1000, eval_every=100, log_dir="logs", warmup_ratio=0.1,
           train_batch_size=8, device='cuda'):
     model.train()
-
+                    
+    os.makedirs(log_dir, exist_ok=True)
+                    
     # initialize data loaders
     train_loader = model.create_dataloader(train_data, batch_size=train_batch_size, shuffle=True)
 
