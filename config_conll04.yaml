@@ -14,10 +14,10 @@ lr_others: 5e-5
 freeze_token_rep: false
 
 # Training Parameters
-num_steps: 600
-warmup_ratio: 1000
+num_steps: 6000
+warmup_ratio: 100
 train_batch_size: 12
-eval_every: 50
+eval_every: 500
 max_neg_type_ratio: 1
 size_sup: -1
 max_len: 384
